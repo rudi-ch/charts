@@ -27,6 +27,8 @@ env: []
   # - name: BUILDKIT_STEP_LOG_MAX_SIZE
   #   value: "10485760"
 
+extraSelectorLabels: {}
+
 pdb:
   # -- Minimum available pods
   minAvailable: 1

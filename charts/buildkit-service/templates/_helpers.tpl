@@ -55,6 +55,9 @@ Selector labels
 {{- define "buildkit.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "buildkit.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+{{- if .Values.extraSelectorLabels }}
+{{ toYaml .Values.extraSelectorLabels }}
+{{- end }}
 {{- end }}
 
 {{/*
